@@ -26,6 +26,11 @@ public class InMemoryUserDataAccessObject implements SignupUserDataAccessInterfa
     }
 
     @Override
+    public String getCurrentUser() {
+        return this.currentUser;
+    }
+
+    @Override
     public boolean existsByName(String identifier) {
         return users.containsKey(identifier);
     }
